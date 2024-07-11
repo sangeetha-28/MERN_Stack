@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 100%;
+}
+.container1{
+    
+    display: grid;
+    width: 100%;
+    height: 20vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 1fr 50px; 
+    grid-template-areas:"nav" "body" "footer";
+}
+
+.nav1{
+    background-color: #2b2d42;
+    float: right;
+    grid-area: nav;
+    width: 100%;
+}
+.nav1 a{
+    text-decoration: none;
+    color: white;
+}
+.nav1 ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 5px;
+    padding: 10px;
+}
+.nav1 li:hover{
+    background-color:#cfd5bc7b ;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.popular .title{
+    display: flex;
+    justify-content:center ;
+    padding-top: 20px;
+    font-size: 28px;
+  }
+.popular_img{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr); 
+   padding: 30px; 
+   gap: 20px;  
+ 
+}
+@media (max-width:992px){
+    .popular_img{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-rows: repeat(4,1fr); 
+    padding: 30px; 
+    gap: 20px
+    }
+ 
+}
+@media (max-width:768px){
+    .popular_img{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr) ;
+    grid-template-rows: repeat(4,1fr); 
+    padding: 30px; 
+    gap: 20px
+    }
+ 
+}
+@media (max-width:576px){
+    .popular_img{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(4,1fr); 
+    padding: 30px; 
+    gap: 20px
+    }
+ 
+}
+
+.img_place{
+  background-color: #032b4355;
+  padding: 6px;
+}
+.popular hr{
+    width: 100px;
+    height: 3px;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    margin-left: 46%;
+    background: #032b43;
+    
+  }
+.popular_img h1{
+    padding: 5px 5px 5px 5px;
+    font-size: 22px;
+    
+}
+.popular_img p{
+    padding: 0px 5px 5px 5px;
+}
+.popular_img .rating{
+    padding: 5px;
+}
+/* #imghover:hover{
+    transform: scale(1.05);
+} */
+
+
+.footer{
+    grid-area: footer;
+    background-color: #2b2d42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    height: 60px;
+    margin-top: 25px;
+    
+}
